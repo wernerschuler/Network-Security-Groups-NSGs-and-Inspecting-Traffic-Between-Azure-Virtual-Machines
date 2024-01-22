@@ -45,4 +45,15 @@ Steps
 
 <img src="https://i.imgur.com/KAjE99T.png" height="40%" width="60%" alt="image showing a virtual machine being created"/>
 
+**4. Use Remote Desktop to connect to your Windows 10 Virtual Machine**
+ - Copy the public IP address of the Windows 10 VM
+   - Virtual machines --> Name of VM --> Look under Public IP address
+
+ <img src="https://i.imgur.com/QufRysh.png" height="40%" width="60%" alt="overview of a virtual machine"/>
+    
+ - Start --> Enter 'Remote desktop connection'
+ - Paste the VM's IP address --> More choices --> Use a different account
+ - Enter the username and password for the VM
+
+<img src="https://i.imgur.com/FSaV9n6.png" height="40%" width="60%" alt="remote desktop connection login screen"/>
 
