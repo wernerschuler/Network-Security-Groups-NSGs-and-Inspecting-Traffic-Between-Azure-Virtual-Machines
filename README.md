@@ -66,3 +66,18 @@ Steps
  - Enter 'Download Wireshark' into Google --> Windows installer --> Once download is complete go to Wireshark
  - In the Wireshark setup, install Wireshark with it's default settings
 
+**6. Open Wireshark and filter for ICMP traffic only**
+ - Start --> Enter Wireshark --> Click 'Start capturing packets' (image below)
+
+<img src="https://i.imgur.com/21jquHi.png" height="40%" width="60%" alt="how to capture packets in wireshark"/>
+
+ - In the filter bar enter 'icmp' then click Enter on your keyboard
+
+<img src="https://i.imgur.com/kVuhxoY.png" height="40%" width="60%" alt="how to capture packets in wireshark"/>
+
+**7. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM**
+ - From your local computer go to portal.azure.com --> Virtual machines --> Click the name of your Ununtu VM --> Scroll down until you see the private IP address
+
+<img src="https://i.imgur.com/dPLUuqq.png" height="40%" width="60%" alt="Virtual machines private IP address"/>
+
+
