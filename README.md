@@ -83,6 +83,16 @@ Steps
  - In the VM --> Start --> PowerShell --> Enter ping [private IP address]
  - Observe the reply and request in Wireshark
 
-<img src="https://i.imgur.com/XAn7y7g.png" height="40%" width="60%" alt="Virtual machines private IP address"/>
+<img src="https://i.imgur.com/XAn7y7g.png" height="80%" width="100%" alt="Virtual machines private IP address"/>
+
+**8. From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.amazon.co.uk) and observe the traffic in WireShark**
+ - Can see from Wireshark the private IP address of the Windows 10 VM is 10.0.0.4, which is sending a request to www.amazon.co.uk and gets a reply with the IP address 18.66.174.162
+
+<img src="https://i.imgur.com/5slkufo.png" height="80%" width="100%" alt="Virtual machines private IP address"/>
+
+**9. Initiate a perpetual ping from your Windows 10 VM to your Ubuntu VM**
+ - To clear Wireshark click the green icon at the top left of the screen (image below)
+
+<img src="https://i.imgur.com/CqXFLco.png" height="50%" width="60%" alt="Virtual machines private IP address"/>
 
 
