@@ -10,7 +10,7 @@ Steps
   - Enter a name for the Resource group --> Set your Region
   - Review + create --> Create
 
-<img src="https://i.imgur.com/Iy6XCZ2.png" height="40%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Iy6XCZ2.png" height="40%" width="60%" alt="image showing resource group being created"/>
 
 **2. Create a Windows 10 Virtual Machine (VM)**
  - portal.azure.com --> Virtual machines --> Create --> Azure virtual machine
@@ -23,4 +23,9 @@ Steps
  - Tick the box indicating 'I confirm I have an eligible Windows 10/11 license with multi-tenant hosting rights.'
  - Review + create --> Create
 
-<img src="https://i.imgur.com/s9TjhXv.png" height="40%" width="60%" alt="Disk Sanitization Steps"/>
+
+
+- Make a note of the Virtual network that was created for this VM
+  - Go to Virtual machines --> Click the name of the VM ---> Look under 'Virtual network/subnet'
+
+<img src="https://i.imgur.com/s9TjhXv.png" height="40%" width="60%" alt="creating a virtual machine"/>
