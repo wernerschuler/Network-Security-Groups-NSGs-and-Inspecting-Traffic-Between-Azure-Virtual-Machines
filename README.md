@@ -80,4 +80,9 @@ Steps
 
 <img src="https://i.imgur.com/dPLUuqq.png" height="40%" width="60%" alt="Virtual machines private IP address"/>
 
+ - In the VM --> Start --> PowerShell --> Enter ping [private IP address]
+ - Observe the reply and request in Wireshark
+
+<img src="https://i.imgur.com/dPLUuqq.png" height="40%" width="60%" alt="Virtual machines private IP address"/>
+
 
