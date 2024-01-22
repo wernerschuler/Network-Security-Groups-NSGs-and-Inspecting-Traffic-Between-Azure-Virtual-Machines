@@ -7,6 +7,8 @@ Terms
 -- 
 - Wireshark
 - ICMP traffic
+- Perpetual ping
+- Network security group
 
 Steps
 -- 
@@ -94,5 +96,23 @@ Steps
  - To clear Wireshark click the green icon at the top left of the screen (image below)
 
 <img src="https://i.imgur.com/CqXFLco.png" height="50%" width="60%" alt="Virtual machines private IP address"/>
+
+ - To perpetual ping the Ubuntu VM
+   - In PowerShell --> Enter ping [private IP address] -t
+ - Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic
+   - From your local computer --> portal.azure.com --> go to Network security groups --> Click the Network security group for the Ubuntu VM
+ - Under Settings click 'Inbound security rules'
+ - Click Add
+  - Source: Any
+  - Source port ranges: *
+  - Destination: Any
+  - Service: Custom
+  - Destination port ranges: *
+  - Protocol: ICMP
+  - Action: Deny
+  - Priority: 200
+  - Name: DENY_ICMP_PING
+ - Add
+
 
 
