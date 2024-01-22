@@ -3,6 +3,11 @@
 
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups.
 
+Terms
+-- 
+- Wireshark
+- ICMP traffic
+
 Steps
 -- 
 **1. Create a Resource Group**
@@ -56,4 +61,8 @@ Steps
  - Enter the username and password for the VM
 
 <img src="https://i.imgur.com/FSaV9n6.png" height="40%" width="60%" alt="remote desktop connection login screen"/>
+
+**5. Within your Windows 10 Virtual Machine, Install Wireshark**
+ - Enter 'Download Wireshark' into Google --> Windows installer --> Once download is complete go to Wireshark
+ - In the Wireshark setup, install Wireshark with it's default settings
 
