@@ -25,6 +25,7 @@ Steps
 
 
 
+
 - Make a note of the Virtual network that was created for this VM
   - Go to Virtual machines --> Click the name of the VM ---> Look under 'Virtual network/subnet'
 
