@@ -5,12 +5,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 Terms
 -- 
-- Wireshark
-- ICMP traffic
-- Perpetual ping
-- Network security group
-- SSH
-- DHCP
+- Wireshark - A network protocol analyser. It is used to capture, analyse network traffic in real-time.
+- ICMP (Internet Control Message Protocol) - Network protocol used to report errors and exchange network status information. One commonly known ICMP message is the "ICMP Echo Request" message, which is used by the "ping" utility to test network connectivity.
+- Network security group (NSG) - Is a security feature that acts as a virtual firewall for controlling and govering inbound and outbound traffic.
+- SSH (Secure Shell) - A network protocol that provides secure and encrypted communication two devices over a network. It is commonly used to allow remote access to a computer or server.
+- DHCP (Dynamic Host Configuration Protocol) - A networking protocol that allows devices to automatically obtain network configuration information, such as IP addresses, subnet masks, and DNS server addresses.
+- RDP (Remote Desktop Protocol) - Protocol developed by Microsoft that allow users to connect and control a computer over a network connection.
 
 Steps
 -- 
