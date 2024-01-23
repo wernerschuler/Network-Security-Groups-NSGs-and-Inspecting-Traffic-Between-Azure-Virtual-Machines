@@ -99,7 +99,7 @@ Steps
 
  - To perpetual ping the Ubuntu VM
    - In PowerShell --> Enter ping [private IP address] -t
- - Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic
+ - a. Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic
    - From your local computer --> portal.azure.com --> go to Network security groups --> Click the Network security group for the Ubuntu VM
  - Under Settings click 'Inbound security rules'
  - Click Add
@@ -113,6 +113,14 @@ Steps
   - Priority: 200
   - Name: DENY_ICMP_PING
  - Add
+
+<img src="https://i.imgur.com/NpOUEIc.png" height="60%" width="80%" alt="Creating a inbound security rule"/>
+
+- b. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity
+  - With the inbound security rule in place to deny ICMP. You can see from the screenshot below, in Wireshark request have been made but no reply has been received. Can also see in PowerShell we get these 'Request timed out'
+
+<img src="https://i.imgur.com/QSaJZ6L.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
+ 
 
 
 
