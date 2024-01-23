@@ -149,11 +149,24 @@ Steps
 **12. In Wireshark, filter for DHCP traffic only**
  - Type dhcp into the filter bar then press Enter
 
-**13. From your Windows 10 VM, try to issue your VM a new IP address from PowerShell using 'ipcongig /renew'
+**13. From your Windows 10 VM, try to issue your VM a new IP address from PowerShell using 'ipcongig /renew'**
  - After entering this command we can see some DHCP traffic in Wireshark
 
 <img src="https://i.imgur.com/qZuWXmp.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
-    
+
+**14. Filter for DNS traffic only**
+ - Enter dns into the filter bar then press Enter
+ - From Windows 10 VM, use command 'nslookup' to see what is the IP address for www.amazon.com
+ - Observe the traffic in Wireshark 
+
+**15. Observe RDP traffic**
+ - In Wireshark filter for RDP traffic only (tcp.port == 3389)
+
+**16. You can see the traffic is non-stop**
+ - This is because RDP is constantly showing a live stream from one computer to another, therefore traffic is always being transmitted.
+
+<img src="https://i.imgur.com/lFuZODg.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
+
  
 
 
