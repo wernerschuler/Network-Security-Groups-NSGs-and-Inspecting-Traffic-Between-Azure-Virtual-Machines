@@ -9,7 +9,8 @@ Terms
 - ICMP traffic
 - Perpetual ping
 - Network security group
-- SSH 
+- SSH
+- DHCP
 
 Steps
 -- 
@@ -144,6 +145,14 @@ Steps
 
  - a. Can see that when a command is entered the SSH traffic appears in Wireshark
  - b. Exit the SSH connection by typing 'exit' and pressing Enter in PowerShell
+
+**12. In Wireshark, filter for DHCP traffic only**
+ - Type dhcp into the filter bar then press Enter
+
+**13. From your Windows 10 VM, try to issue your VM a new IP address from PowerShell using 'ipcongig /renew'
+ - After entering this command we can see some DHCP traffic in Wireshark
+
+<img src="https://i.imgur.com/qZuWXmp.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
     
  
 
