@@ -9,6 +9,7 @@ Terms
 - ICMP traffic
 - Perpetual ping
 - Network security group
+- SSH 
 
 Steps
 -- 
@@ -127,6 +128,22 @@ Steps
 - d. Go back to your Windows 10 VM and see the ICMP traffic in Wireshark and PowerShell. Should now be getting replies.
 - e. Stop the ping
   - Press Ctrl + C in PowerShell
+
+**10. Back in Wireshark filter for SSH traffic**
+ - Enter in the filter bar 'ssh'
+
+**11. From your Windows 10 VM, SSH into your Ubuntu VM using it's private IP address**
+ - First go to portal.azure.com and make a note of the Ubuntu VM private IP address
+   - portal.azure.com --> Virtual machines --> Click the name of the VM --> Scroll down until you see the private IP address
+  - In your Windows VM --> In PowerShell --> Enter ssh [username of Ubuntu VM]@[Ubuntu VM's private IP address]
+  - 'Are you sure you want to continue connecting': yes --> Enter
+  - Enter the password for the Ubuntu VM. **Note** you will not see the characters you enter on the screen, but when you are typing characters it is being entered into the terminal.
+  - Once you entered your password --> Press Enter
+
+<img src="https://i.imgur.com/TyH11VZ.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
+
+ - a. Can see that when a command is entered the SSH traffic appears in Wireshark
+ - b. Exit the SSH connection by typing 'exit' and pressing Enter in PowerShell
     
  
 
