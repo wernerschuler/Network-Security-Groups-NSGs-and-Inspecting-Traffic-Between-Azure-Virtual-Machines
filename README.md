@@ -119,7 +119,15 @@ Steps
 - b. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity
   - With the inbound security rule in place to deny ICMP. You can see from the screenshot below, in Wireshark request have been made but no reply has been received. Can also see in PowerShell we get these 'Request timed out'
 
-<img src="https://i.imgur.com/QSaJZ6L.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
+<img src="https://i.imgur.com/QSaJZ6L.png" height="80%" width="80%" alt="wireshark and powershell not getting a reply"/>
+
+- c. Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is using
+  - In your local computer --> portal.azure.com --> Network security groups --> Click the Network security group for the Ubuntu VM --> Inbound security rules --> Click the DENY_ICMP_PING rule --> Under 'Action' select Allow --> Save
+
+- d. Go back to your Windows 10 VM and see the ICMP traffic in Wireshark and PowerShell. Should now be getting replies.
+- e. Stop the ping
+  - Press Ctrl + C in PowerShell
+    
  
 
 
