@@ -10,10 +10,10 @@ Terms
 -- 
 - Wireshark - A network protocol analyser. It is used to capture, analyse network traffic in real-time.
 - ICMP (Internet Control Message Protocol) - Network protocol used to report errors and exchange network status information. One commonly known ICMP message is the "ICMP Echo Request" message, which is used by the "ping" utility to test network connectivity.
-- Network security group (NSG) - Is a security feature that acts as a virtual firewall for controlling and govering inbound and outbound traffic.
-- SSH (Secure Shell) - A network protocol that provides secure and encrypted communication two devices over a network. It is commonly used to allow remote access to a computer or server.
+- Network security group (NSG) - This is a security feature that acts as a virtual firewall for controlling and governing inbound and outbound traffic.
+- SSH (Secure Shell) - A network protocol that provides secure and encrypted communication between two devices over a network. It is commonly used to allow remote access to a computer or server.
 - DHCP (Dynamic Host Configuration Protocol) - A networking protocol that allows devices to automatically obtain network configuration information, such as IP addresses, subnet masks, and DNS server addresses.
-- RDP (Remote Desktop Protocol) - Protocol developed by Microsoft that allow users to connect and control a computer over a network connection.
+- RDP (Remote Desktop Protocol) - Protocol developed by Microsoft that allows users to connect and control a computer over a network connection.
 
 Steps
 -- 
@@ -70,8 +70,8 @@ Steps
 <img src="https://i.imgur.com/FSaV9n6.png" height="40%" width="60%" alt="remote desktop connection login screen"/>
 
 **5. Within your Windows 10 Virtual Machine, Install Wireshark**
- - Enter 'Download Wireshark' into Google --> Windows installer --> Once download is complete go to Wireshark
- - In the Wireshark setup, install Wireshark with it's default settings
+ - Enter 'Download Wireshark' into Google --> Windows installer --> Once the download is complete go to Wireshark
+ - In the Wireshark setup, install Wireshark with its default settings
 
 **6. Open Wireshark and filter for ICMP traffic only**
  - Start --> Enter Wireshark --> Click 'Start capturing packets' (image below)
@@ -83,7 +83,7 @@ Steps
 <img src="https://i.imgur.com/kVuhxoY.png" height="40%" width="60%" alt="how to capture packets in wireshark"/>
 
 **7. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM**
- - From your local computer go to portal.azure.com --> Virtual machines --> Click the name of your Ununtu VM --> Scroll down until you see the private IP address
+ - From your local computer go to portal.azure.com --> Virtual machines --> Click the name of your Ubuntu VM --> Scroll down until you see the private IP address
 
 <img src="https://i.imgur.com/dPLUuqq.png" height="40%" width="60%" alt="Virtual machines private IP address"/>
 
@@ -122,7 +122,7 @@ Steps
 <img src="https://i.imgur.com/NpOUEIc.png" height="60%" width="80%" alt="Creating a inbound security rule"/>
 
 - b. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity
-  - With the inbound security rule in place to deny ICMP. You can see from the screenshot below, in Wireshark request have been made but no reply has been received. Can also see in PowerShell we get these 'Request timed out'
+  - With the inbound security rule in place to deny ICMP. You can see from the screenshot below, that in Wireshark requests have been made but no reply has been received. Can also see in PowerShell we get these 'Request timed out'
 
 <img src="https://i.imgur.com/QSaJZ6L.png" height="80%" width="80%" alt="wireshark and powershell not getting a reply"/>
 
@@ -136,12 +136,12 @@ Steps
 **10. Back in Wireshark filter for SSH traffic**
  - Enter in the filter bar 'ssh'
 
-**11. From your Windows 10 VM, SSH into your Ubuntu VM using it's private IP address**
- - First go to portal.azure.com and make a note of the Ubuntu VM private IP address
+**11. From your Windows 10 VM, SSH into your Ubuntu VM using its private IP address**
+ - First, go to portal.azure.com and make a note of the Ubuntu VM private IP address
    - portal.azure.com --> Virtual machines --> Click the name of the VM --> Scroll down until you see the private IP address
   - In your Windows VM --> In PowerShell --> Enter ssh [username of Ubuntu VM]@[Ubuntu VM's private IP address]
   - 'Are you sure you want to continue connecting': yes --> Enter
-  - Enter the password for the Ubuntu VM. **Note** you will not see the characters you enter on the screen, but when you are typing characters it is being entered into the terminal.
+  - Enter the password for the Ubuntu VM. **Note** You will not see the characters you enter on the screen, but when you are typing characters it is being entered into the terminal.
   - Once you entered your password --> Press Enter
 
 <img src="https://i.imgur.com/TyH11VZ.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
@@ -152,14 +152,14 @@ Steps
 **12. In Wireshark, filter for DHCP traffic only**
  - Type dhcp into the filter bar then press Enter
 
-**13. From your Windows 10 VM, try to issue your VM a new IP address from PowerShell using 'ipcongig /renew'**
+**13. From your Windows 10 VM, try to issue your VM a new IP address from PowerShell using 'ipconfig /renew'**
  - After entering this command we can see some DHCP traffic in Wireshark
 
 <img src="https://i.imgur.com/qZuWXmp.png" height="60%" width="80%" alt="wireshark and powershell not getting a reply"/>
 
 **14. Filter for DNS traffic only**
  - Enter dns into the filter bar then press Enter
- - From Windows 10 VM, use command 'nslookup' to see what is the IP address for www.amazon.com
+ - From Windows 10 VM, use the command 'nslookup' to see what is the IP address for www.amazon.com
  - Observe the traffic in Wireshark 
 
 **15. Observe RDP traffic**
